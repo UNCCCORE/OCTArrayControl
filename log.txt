@@ -1,0 +1,6 @@
+GUI opened
+15-May-2017 16:07:22 : Opened serial connection on COM4
+15-May-2017 16:07:25 : Serial connection closed.
+15-May-2017 16:07:27 : List of COM ports refreshed.
+15-May-2017 16:07:30 : Closing GUI.
+15-May-2017 16:07:30 : Unable to stop all motors: No serial connection.
