@@ -22,7 +22,7 @@ function varargout = ControlPanel(varargin)
 
 % Edit the above text to modify the response to help ControlPanel
 
-% Last Modified by GUIDE v2.5 26-Jan-2017 13:52:19
+% Last Modified by GUIDE v2.5 17-May-2017 15:23:38
 
 % Begin initialization code - DO NOT EDIT
 gui_Singleton = 1;
@@ -146,8 +146,17 @@ function checkbox6_Callback(hObject, eventdata, handles)
 % Hint: get(hObject,'Value') returns toggle state of checkbox6
 end
 
-% --- Executes on button press in checkbox7.
+% --- Executes on button press in checkbox8.
 function checkbox7_Callback(hObject, eventdata, handles)
+% hObject    handle to checkbox8 (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)
+
+% Hint: get(hObject,'Value') returns toggle state of checkbox8
+end
+
+% --- Executes on button press in checkbox7.
+function checkbox8_Callback(hObject, eventdata, handles)
 % hObject    handle to checkbox7 (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    structure with handles and user data (see GUIDATA)
@@ -156,21 +165,12 @@ function checkbox7_Callback(hObject, eventdata, handles)
 end
 
 % --- Executes on button press in checkbox8.
-function checkbox8_Callback(hObject, eventdata, handles)
+function checkbox9_Callback(hObject, eventdata, handles)
 % hObject    handle to checkbox8 (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    structure with handles and user data (see GUIDATA)
 
 % Hint: get(hObject,'Value') returns toggle state of checkbox8
-end
-
-% --- Executes on button press in checkbox9.
-function checkbox9_Callback(hObject, eventdata, handles)
-% hObject    handle to checkbox9 (see GCBO)
-% eventdata  reserved - to be defined in a future version of MATLAB
-% handles    structure with handles and user data (see GUIDATA)
-
-% Hint: get(hObject,'Value') returns toggle state of checkbox9
 end
 
 % --- Executes on button press in checkbox10.
@@ -609,7 +609,9 @@ function figure1_CreateFcn(hObject, eventdata, handles)
 % hObject    handle to figure1 (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    empty - handles not created until after all CreateFcns called
-addpath('C:\Users\M.Cobb\OneDrive - University of North Carolina at Charlotte\Dropbox\OCTMotorArray\functions');
+
+currentDir = pwd;
+addpath([currentDir, '\functions']);
 
 % check for log .txt file
 global fid

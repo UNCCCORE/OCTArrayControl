@@ -1,6 +1,41 @@
 GUI opened
-15-May-2017 16:07:22 : Opened serial connection on COM4
-15-May-2017 16:07:25 : Serial connection closed.
-15-May-2017 16:07:27 : List of COM ports refreshed.
-15-May-2017 16:07:30 : Closing GUI.
-15-May-2017 16:07:30 : Unable to stop all motors: No serial connection.
+17-May-2017 16:14:52 : OCT 1 motors selected
+17-May-2017 16:14:52 : All motors selected.
+17-May-2017 16:15:05 : List of COM ports refreshed.
+17-May-2017 16:15:06 : Opened serial connection on COM5
+17-May-2017 16:15:10 : Selected motors set to release.
+17-May-2017 16:15:28 : All motors stopped.
+17-May-2017 16:15:45 : Selected motors set to release.
+17-May-2017 16:15:57 : Serial connection closed.
+17-May-2017 16:15:58 : Opened serial connection on COM5
+17-May-2017 16:16:00 : Motor speed set to 57.5 17-May-2017 16:16:02 : OCT 1 motors deselected
+17-May-2017 16:16:02 : All motors deselected.
+17-May-2017 16:16:05 : Selected motors set to release.
+17-May-2017 16:16:20 : Selected motors set to release.
+17-May-2017 16:16:28 : Selected motors set to release.
+17-May-2017 16:16:34 : Selected motors set to release.
+17-May-2017 16:16:46 : Selected motors set to release.
+17-May-2017 16:17:04 : Selected motors set to release.
+17-May-2017 16:17:14 : Selected motors set to release.
+17-May-2017 16:17:21 : Selected motors set to release.
+17-May-2017 16:17:24 : Selected motors set to release.
+17-May-2017 16:17:31 : Selected motors set to release.
+17-May-2017 16:17:35 : Selected motors set to release.
+17-May-2017 16:17:43 : Selected motors set to release.
+17-May-2017 16:17:49 : Selected motors set to release.
+17-May-2017 16:18:19 : OCT 1 motors selected
+17-May-2017 16:18:19 : All motors selected.
+17-May-2017 16:18:20 : OCT 1 motors deselected
+17-May-2017 16:18:20 : All motors deselected.
+17-May-2017 16:18:25 : Selected motors set to release.
+17-May-2017 16:18:35 : Selected motors set to release.
+17-May-2017 16:18:47 : Selected motors set to release.
+17-May-2017 16:19:02 : Selected motors set to release.
+17-May-2017 16:19:18 : Selected motors set to release.
+17-May-2017 16:19:19 : Selected motors set to release.
+17-May-2017 16:19:26 : Selected motors set to release.
+17-May-2017 16:19:31 : Selected motors set to release.
+17-May-2017 16:20:26 : All motors stopped.
+17-May-2017 16:20:27 : Serial connection closed.
+17-May-2017 16:20:28 : Closing GUI.
+17-May-2017 16:20:28 : Unable to stop all motors: No serial connection.
