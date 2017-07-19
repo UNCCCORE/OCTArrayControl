@@ -1,4 +1,5 @@
 function setMotorSpeed(serialDeviceObj,motorNumber,speed)
+
 direction = 0;
 if speed<0
     direction = 1;

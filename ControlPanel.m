@@ -22,7 +22,7 @@ function varargout = ControlPanel(varargin)
 
 % Edit the above text to modify the response to help ControlPanel
 
-% Last Modified by GUIDE v2.5 17-May-2017 15:23:38
+% Last Modified by GUIDE v2.5 19-Jul-2017 12:41:30
 
 % Begin initialization code - DO NOT EDIT
 gui_Singleton = 1;
@@ -524,7 +524,7 @@ if hObject.Value ==1
     end
     
     set(hObject,'String','Unselect All');
-        set(handles.togglebuttonPort,'Value',1);
+    set(handles.togglebuttonPort,'Value',1);
     set(handles.togglebuttonStarboard,'Value',1);
     set(handles.togglebuttonAft,'Value',1);
     printMessage(handles,'All motors selected.');
@@ -854,7 +854,7 @@ else
     unselectSpecificMotors(handles,portMotors);
     printMessage(handles,'Port motors deselected.')
 end
-    
+
 end
 
 % --- Executes on button press in togglebuttonAft.
@@ -947,6 +947,7 @@ if get(handles.checkboxEnableHotkeys,'Value')
             pushbuttonAllStop_Callback(handles.pushbuttonAllStop, eventdata, handles);
     end
 end
+
 end
 
 
@@ -957,4 +958,72 @@ function checkboxEnableHotkeys_Callback(hObject, eventdata, handles)
 % handles    structure with handles and user data (see GUIDATA)
 
 % Hint: get(hObject,'Value') returns toggle state of checkboxEnableHotkeys
+end
+
+
+% --- Executes during object creation, after setting all properties.
+function axes1_CreateFcn(hObject, eventdata, handles)
+% hObject    handle to axes1 (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    empty - handles not created until after all CreateFcns called
+
+% Hint: place code in OpeningFcn to populate axes1
+global errorNames
+errorNames ={'Safe Start Violation','Serial Error','Req. Chnl Invalid','Command Timeout','Limit/Kill Switch',...
+    'Low V_{in}','High V_{in}','Motor Driver Error','Over Temperature','Err Line High','Serial: Frame',...
+    'Serial: Noise','Serial: RX Overrun','Serial: Format','Serial:CRC'};
+axes(hObject)
+set(hObject,'Box','on')
+set(hObject,'YTick',[])
+set(hObject,'XTick',[])
+
+cellWidth = 1/length(errorNames);
+cellHeight = 1/27;
+for i = 1:length(errorNames)
+    hText=text((i-1)*cellWidth,1,errorNames{i});
+    set(hText,'Rotation',90);
+    set(hText,'VerticalAlignment','top')
+    
+    hLine = line([(i-1)*cellWidth (i-1)*cellWidth],[0 1]);
+    set(hLine,'Color',[0 0 0]);
+    
+end
+for i = 1:27
+    hText=text(-cellWidth+0.01,1-cellHeight*i-0.01,num2str(i));
+    set(hText,'VerticalAlignment','bottom')
+    set(hText,'HorizontalAlignment','left')
+    hLine = line([0 1],(1-cellHeight*i)*[1 1]);
+    set(hLine,'Color',[0 0 0]);
+end
+global errorIndicators
+for i = 1:length(errorNames)
+    for j = 1:27
+        errorIndicators(j,i) = rectangle('Position',[(i-1)*cellWidth,(1-j*cellHeight),cellWidth,cellHeight]);
+        set(errorIndicators(j,i),'FaceColor','blue');
+    end
+end
+end
+
+
+% --- Executes on button press in refreshErrorCodesPushButton.
+function refreshErrorCodesPushButton_Callback(hObject, eventdata, handles)
+% hObject    handle to refreshErrorCodesPushButton (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)
+global s
+
+global errorNames
+global errorIndicators
+motors = getSelectedMotors(handles);
+for i = 1:length(motors)
+    code = getErrorCode(s,motors(i));
+    for j = 1:length(errorNames)
+        if code(j)==1
+            set(errorIndicators(motors(i),j),'FaceColor','red');
+        else
+            set(errorIndicators(motors(i),j),'FaceColor','green');
+        end
+    end
+end
+printMessage(handles,'Error codes updated.')
 end
