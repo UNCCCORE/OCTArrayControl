@@ -1,3 +1,53 @@
 GUI opened
-19-Jul-2017 13:21:15 : Closing GUI.
-19-Jul-2017 13:21:15 : Unable to stop all motors: No serial connection.
+19-Jul-2017 17:56:18 : OCT 1 motors selected
+19-Jul-2017 17:56:21 : List of COM ports refreshed.
+19-Jul-2017 17:56:21 : Opened serial connection on COM5
+19-Jul-2017 17:56:23 : Motor speed set to 20 19-Jul-2017 17:56:23 : Motor speed set to 30 19-Jul-2017 17:56:23 : Motor speed set to 40 19-Jul-2017 17:56:23 : Motor speed set to 50 19-Jul-2017 17:56:23 : Motor speed set to 60 19-Jul-2017 17:56:23 : Motor speed set to 60 19-Jul-2017 17:56:26 : Selected motors set to release.
+19-Jul-2017 17:58:45 : Selected motors set to release.
+19-Jul-2017 18:00:43 : Error code checking timed out: motor 1.
+19-Jul-2017 18:01:06 : Error code checking timed out: motor 2.
+19-Jul-2017 18:01:22 : Error code checking timed out: motor 3.
+19-Jul-2017 18:01:32 : Error code checking timed out: motor 4.
+19-Jul-2017 18:01:42 : Error code checking timed out: motor 5.
+19-Jul-2017 18:08:46 : Error code checking timed out: motor 1.
+19-Jul-2017 18:08:49 : Error code checking timed out: motor 2.
+19-Jul-2017 18:08:52 : Error code checking timed out: motor 3.
+19-Jul-2017 18:08:55 : Error code checking timed out: motor 4.
+19-Jul-2017 18:08:58 : Error code checking timed out: motor 5.
+19-Jul-2017 18:09:01 : Error code checking timed out: motor 1.
+19-Jul-2017 18:09:04 : Error code checking timed out: motor 2.
+19-Jul-2017 18:09:07 : Error code checking timed out: motor 3.
+19-Jul-2017 18:09:10 : Error code checking timed out: motor 4.
+19-Jul-2017 18:09:13 : Error code checking timed out: motor 5.
+19-Jul-2017 18:09:20 : Error code checking timed out: motor 6.
+19-Jul-2017 18:09:34 : Error code checking timed out: motor 1.
+19-Jul-2017 18:09:37 : Error code checking timed out: motor 2.
+19-Jul-2017 18:09:40 : Error code checking timed out: motor 3.
+19-Jul-2017 18:09:43 : Error code checking timed out: motor 4.
+19-Jul-2017 18:09:46 : Error code checking timed out: motor 5.
+19-Jul-2017 18:09:49 : Error code checking timed out: motor 1.
+19-Jul-2017 18:09:52 : Error code checking timed out: motor 2.
+19-Jul-2017 18:09:55 : Error code checking timed out: motor 3.
+19-Jul-2017 18:09:58 : Error code checking timed out: motor 4.
+19-Jul-2017 18:10:01 : Error code checking timed out: motor 5.
+19-Jul-2017 18:10:59 : Error code checking timed out: motor 1.
+19-Jul-2017 18:11:02 : Error code checking timed out: motor 2.
+19-Jul-2017 18:11:05 : Error code checking timed out: motor 3.
+19-Jul-2017 18:11:08 : Error code checking timed out: motor 4.
+19-Jul-2017 18:11:11 : Error code checking timed out: motor 5.
+19-Jul-2017 18:11:11 : Error code updated: motor 6.
+19-Jul-2017 18:11:11 : Error code updated: motor 7.
+19-Jul-2017 18:11:11 : Error code updated: motor 8.
+19-Jul-2017 18:13:59 : Error code checking timed out: motor 1.
+19-Jul-2017 18:14:02 : Error code checking timed out: motor 2.
+19-Jul-2017 18:14:05 : Error code checking timed out: motor 3.
+19-Jul-2017 18:14:08 : Error code checking timed out: motor 4.
+19-Jul-2017 18:14:11 : Error code checking timed out: motor 5.
+19-Jul-2017 18:14:11 : Error code updated: motor 6.
+19-Jul-2017 18:14:11 : Error code updated: motor 7.
+19-Jul-2017 18:14:11 : Error code updated: motor 8.
+19-Jul-2017 18:14:11 : Error code updated: motor 9.
+19-Jul-2017 18:14:49 : Selected motors set to release.
+19-Jul-2017 18:15:21 : Serial connection closed.
+19-Jul-2017 18:15:22 : Closing GUI.
+19-Jul-2017 18:15:22 : Unable to stop all motors: No serial connection.

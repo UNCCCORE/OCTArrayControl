@@ -1016,8 +1016,8 @@ global errorNames
 global errorIndicators
 motors = getSelectedMotors(handles);
 for i = 1:length(motors)
-    code = getErrorCode(s,motors(i));
-    for j = 1:length(errorNames)
+    code = getErrorCode(s,motors(i),handles);
+    for j = 1:min(length(errorNames),length(code))
         if code(j)==1
             set(errorIndicators(motors(i),j),'FaceColor','red');
         else
@@ -1025,5 +1025,5 @@ for i = 1:length(motors)
         end
     end
 end
-printMessage(handles,'Error codes updated.')
+
 end
