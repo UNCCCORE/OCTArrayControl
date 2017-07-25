@@ -626,7 +626,7 @@ aftMotors = 3*[0:8]+3;
 global starboardMotors
 starboardMotors = 3*[0:8]+2;
 
-logMessage('GUI opened');
+logMessage(sprintf('GUI opened by %s',getenv('username')));
 end
 
 
