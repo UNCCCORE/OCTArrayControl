@@ -16,6 +16,13 @@ lIndex2 = findstr(lErrMsg,'Use')-3;
 lComStr = lErrMsg(lIndex1:lIndex2);
 lCOM_Port = split(lComStr,', ');
 
+if isunix
+    lCOM_Port = lCOM_Port(contains(lCOM_Port,'usbmodem'));
+else
+    lCOM_Port = lCOM_Port(contains(lCOM_Port,'COM'));
+end
+
+
 % Parse the resulting string
 % lIndexDot = findstr(lComStr,',');
 % 
