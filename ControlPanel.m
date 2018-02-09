@@ -611,7 +611,7 @@ function figure1_CreateFcn(hObject, eventdata, handles)
 % handles    empty - handles not created until after all CreateFcns called
 
 currentDir = pwd;
-addpath(fullfile(currentDir,'functions'));
+addpath(genpath(pwd));
 
 % check for log .txt file
 global fid
