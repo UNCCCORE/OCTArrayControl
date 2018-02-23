@@ -1,1 +1,3 @@
 GUI opened by M.Cobb
+22-Feb-2018 19:38:42 : Closing GUI.
+22-Feb-2018 19:38:42 : Unable to stop all motors: No serial connection.

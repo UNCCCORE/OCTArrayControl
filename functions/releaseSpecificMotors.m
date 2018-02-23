@@ -1,4 +1,3 @@
-
 function releaseSpecificMotors(handles,motors)
 
 global motorSpeedSetDelay;

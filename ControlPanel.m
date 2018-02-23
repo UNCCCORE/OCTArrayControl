@@ -22,7 +22,7 @@ function varargout = ControlPanel(varargin)
 
 % Edit the above text to modify the response to help ControlPanel
 
-% Last Modified by GUIDE v2.5 19-Jul-2017 12:41:30
+% Last Modified by GUIDE v2.5 22-Feb-2018 19:19:44
 
 % Begin initialization code - DO NOT EDIT
 gui_Singleton = 1;
@@ -563,7 +563,11 @@ function popupmenuCOMPortSelect_CreateFcn(hObject, eventdata, handles)
 if ispc && isequal(get(hObject,'BackgroundColor'), get(0,'defaultUicontrolBackgroundColor'))
     set(hObject,'BackgroundColor','white');
 end
-set(hObject,'String',getAvailableComPort);
+comPorts = getAvailableComPort;
+if numel(comPorts)>1
+    comPorts = 'None';
+end
+set(hObject,'String',comPorts);
 
 end
 
@@ -970,9 +974,10 @@ function axes1_CreateFcn(hObject, eventdata, handles)
 % Hint: place code in OpeningFcn to populate axes1
 global errorNames
 errorNames ={'Safe Start Violation','Serial Error','Req. Chnl Invalid','Command Timeout','Limit/Kill Switch',...
-    'Low V_{in}','High V_{in}','Motor Driver Error','Over Temperature','Err Line High','Serial: Frame',...
+    'Low $V_{in}$','High $V_{in}$','Motor Driver Error','Over Temperature','Err Line High','Serial: Frame',...
     'Serial: Noise','Serial: RX Overrun','Serial: Format','Serial:CRC'};
 axes(hObject)
+set(hObject, 'TickLabelInterpreter', 'Latex')
 set(hObject,'Box','on')
 set(hObject,'YTick',[])
 set(hObject,'XTick',[])
@@ -1026,4 +1031,17 @@ for i = 1:length(motors)
     end
 end
 
+end
+
+
+% --- Executes on button press in pushButtonExitSafeStart.
+function pushButtonExitSafeStart_Callback(hObject, eventdata, handles)
+% hObject    handle to pushButtonExitSafeStart (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)
+if checkSerialConnection()
+   global s
+   fwrite(s,uint8(131));
+   logMessage('Exit safe start command sent')
+end
 end
