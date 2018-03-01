@@ -1,3 +1,16 @@
 GUI opened by M.Cobb
-22-Feb-2018 19:51:31 : Closing GUI.
-22-Feb-2018 19:51:31 : Unable to stop all motors: No serial connection.
+28-Feb-2018 14:25:28 : Opened serial connection on COM5
+28-Feb-2018 14:25:30 : Motor speed set to 10 28-Feb-2018 14:25:30 : Motor speed set to 20 28-Feb-2018 14:25:30 : Motor speed set to 30 28-Feb-2018 14:25:30 : Motor speed set to 40 28-Feb-2018 14:25:30 : Motor speed set to 50 28-Feb-2018 14:25:32 : OCT 1 motors selected
+28-Feb-2018 14:25:32 : All motors selected.
+28-Feb-2018 14:25:32 : Selected motors set to release.
+01-Mar-2018 12:11:05 : Closing GUI.
+01-Mar-2018 12:11:07 : Closing GUI.
+01-Mar-2018 12:11:19 : Closing GUI.
+01-Mar-2018 12:11:19 : Closing GUI.
+01-Mar-2018 12:11:47 : Closing GUI.
+01-Mar-2018 12:12:34 : Closing GUI.
+01-Mar-2018 12:12:40 : Closing GUI.
+01-Mar-2018 12:14:34 : Closing GUI.
+01-Mar-2018 12:14:34 : Unable to stop all motors: No serial connection.
+01-Mar-2018 12:15:05 : Closing GUI.
+01-Mar-2018 12:15:05 : Unable to stop all motors: No serial connection.

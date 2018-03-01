@@ -1,5 +1,5 @@
 function closeSerial(handles,s)
-if strcmp(class(s),'serial');
+if checkSerialConnection
     fclose(s);
     delete(s);
     clearvars -global s
