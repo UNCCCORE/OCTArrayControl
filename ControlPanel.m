@@ -22,7 +22,7 @@ function varargout = ControlPanel(varargin)
 
 % Edit the above text to modify the response to help ControlPanel
 
-% Last Modified by GUIDE v2.5 22-Feb-2018 19:19:44
+% Last Modified by GUIDE v2.5 26-Mar-2018 14:28:26
 
 % Begin initialization code - DO NOT EDIT
 gui_Singleton = 1;
@@ -564,7 +564,7 @@ if ispc && isequal(get(hObject,'BackgroundColor'), get(0,'defaultUicontrolBackgr
     set(hObject,'BackgroundColor','white');
 end
 comPorts = getAvailableComPort;
-if numel(comPorts)>1
+if numel(comPorts)==0
     comPorts = 'None';
 end
 set(hObject,'String',comPorts);
@@ -757,7 +757,7 @@ if checkSerialConnection()
     selectedStarboardMotors = starboardMotors(ismember(starboardMotors,getSelectedMotors(handles)));
     speed = getMotorSpeed(handles);
     for i = 1:min([length(selectedPortMotors),length(selectedStarboardMotors)])
-        if ismember(selectedPortMotors(i)+1,selectedStarboardMotors);
+        if ismember(selectedPortMotors(i)+1,selectedStarboardMotors)
             setMotorSpeed(s,selectedPortMotors(i),-speed);
             pause(motorSpeedSetDelay);
             setMotorSpeed(s,selectedStarboardMotors(i),speed);
@@ -1016,7 +1016,7 @@ function refreshErrorCodesPushButton_Callback(hObject, eventdata, handles)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    structure with handles and user data (see GUIDATA)
 global s
-
+global motorSpeedSetDelay
 global errorNames
 global errorIndicators
 motors = getSelectedMotors(handles);
@@ -1029,6 +1029,7 @@ for i = 1:length(motors)
             set(errorIndicators(motors(i),j),'FaceColor','green');
         end
     end
+    pause(motorSpeedSetDelay);
 end
 
 end
@@ -1044,4 +1045,41 @@ if checkSerialConnection()
    fwrite(s,uint8(131));
    logMessage('Exit safe start command sent')
 end
+end
+
+
+
+function motorCommandDelay_Callback(hObject, eventdata, handles)
+% hObject    handle to motorCommandDelay (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)
+
+% Hints: get(hObject,'String') returns contents of motorCommandDelay as text
+%        str2double(get(hObject,'String')) returns contents of motorCommandDelay as a double
+[num, status] = str2num(hObject.String);
+global motorSpeedSetDelay
+if status
+    num = min([max([num 0.000001]) 1]);
+    
+    motorSpeedSetDelay = num;
+
+    
+end
+hObject.String = num2str(motorSpeedSetDelay);
+
+
+end
+% --- Executes during object creation, after setting all properties.
+function motorCommandDelay_CreateFcn(hObject, eventdata, handles)
+% hObject    handle to motorCommandDelay (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    empty - handles not created until after all CreateFcns called
+
+% Hint: edit controls usually have a white background on Windows.
+%       See ISPC and COMPUTER
+if ispc && isequal(get(hObject,'BackgroundColor'), get(0,'defaultUicontrolBackgroundColor'))
+    set(hObject,'BackgroundColor','white');
+end
+global motorSpeedSetDelay;
+motorSpeedSetDelay = num2str(hObject.String);
 end

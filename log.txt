@@ -1,3 +1,5 @@
-GUI opened by M.Cobb
-22-Feb-2018 19:38:42 : Closing GUI.
-22-Feb-2018 19:38:42 : Unable to stop all motors: No serial connection.
+GUI opened by 
+26-Mar-2018 14:48:18 : Opened serial connection on /dev/cu.usbmodem1421
+26-Mar-2018 14:48:18 : Motor speed set to 10 26-Mar-2018 14:48:19 : Motor speed set to 20 26-Mar-2018 14:48:19 : Motor speed set to 30 26-Mar-2018 14:48:26 : Serial connection closed.
+26-Mar-2018 14:49:15 : Closing GUI.
+26-Mar-2018 14:49:15 : Unable to stop all motors: No serial connection.
