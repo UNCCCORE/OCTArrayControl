@@ -15,9 +15,11 @@ if speed>100
 end
 
 % Check to make sure the motor number makes sense, if so, turn on motor
-if motorNumber >=1 && motorNumber<=27
-    command = uint8([170 ; motorNumber; 5+direction; 0; speed]);
-    fwrite(serialDeviceObj,command);
+if checkSerialConnection()
+    if motorNumber >=1 && motorNumber<=27
+        command = uint8([170 ; motorNumber; 5+direction; 0; speed]);
+        fwrite(serialDeviceObj,command);
+    end
 end
 
 

@@ -1,4 +1,4 @@
 function yesno = checkSerialConnection()
 global s
-yesno = strcmp(class(s),'serial');
+yesno =and(strcmp(class(s),'serial'),isvalid(s));
 end
