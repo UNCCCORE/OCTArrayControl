@@ -1,24 +1,14 @@
-<<<<<<< HEAD
 GUI opened by 
-26-Mar-2018 14:48:18 : Opened serial connection on /dev/cu.usbmodem1421
-26-Mar-2018 14:48:18 : Motor speed set to 10 26-Mar-2018 14:48:19 : Motor speed set to 20 26-Mar-2018 14:48:19 : Motor speed set to 30 26-Mar-2018 14:48:26 : Serial connection closed.
-26-Mar-2018 14:49:15 : Closing GUI.
-26-Mar-2018 14:49:15 : Unable to stop all motors: No serial connection.
-=======
-GUI opened by M.Cobb
-28-Feb-2018 14:25:28 : Opened serial connection on COM5
-28-Feb-2018 14:25:30 : Motor speed set to 10 28-Feb-2018 14:25:30 : Motor speed set to 20 28-Feb-2018 14:25:30 : Motor speed set to 30 28-Feb-2018 14:25:30 : Motor speed set to 40 28-Feb-2018 14:25:30 : Motor speed set to 50 28-Feb-2018 14:25:32 : OCT 1 motors selected
-28-Feb-2018 14:25:32 : All motors selected.
-28-Feb-2018 14:25:32 : Selected motors set to release.
-01-Mar-2018 12:11:05 : Closing GUI.
-01-Mar-2018 12:11:07 : Closing GUI.
-01-Mar-2018 12:11:19 : Closing GUI.
-01-Mar-2018 12:11:19 : Closing GUI.
-01-Mar-2018 12:11:47 : Closing GUI.
-01-Mar-2018 12:12:34 : Closing GUI.
-01-Mar-2018 12:12:40 : Closing GUI.
-01-Mar-2018 12:14:34 : Closing GUI.
-01-Mar-2018 12:14:34 : Unable to stop all motors: No serial connection.
-01-Mar-2018 12:15:05 : Closing GUI.
-01-Mar-2018 12:15:05 : Unable to stop all motors: No serial connection.
->>>>>>> refs/remotes/origin/master
+26-Mar-2018 14:57:43 : Opened serial connection on /dev/cu.usbmodem1421
+Exit safe start command sent
+26-Mar-2018 14:57:58 : OCT 1 motors selected
+26-Mar-2018 14:57:58 : All motors selected.
+26-Mar-2018 14:58:01 : Motor speed set to 10 26-Mar-2018 14:58:01 : Motor speed set to 20 26-Mar-2018 14:58:02 : Motor speed set to 30 26-Mar-2018 14:58:02 : Motor speed set to 40 26-Mar-2018 14:58:31 : OCT 1 motors deselected
+26-Mar-2018 14:58:32 : All motors deselected.
+26-Mar-2018 14:58:33 : Serial connection closed.
+26-Mar-2018 15:03:03 : Closing GUI.
+26-Mar-2018 15:03:21 : Closing GUI.
+26-Mar-2018 15:03:29 : Closing GUI.
+26-Mar-2018 15:03:46 : Closing GUI.
+26-Mar-2018 15:04:40 : Closing GUI.
+26-Mar-2018 15:04:40 : Unable to stop all motors: No serial connection.
