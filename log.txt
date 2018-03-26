@@ -1,14 +1,1 @@
 GUI opened by 
-26-Mar-2018 14:57:43 : Opened serial connection on /dev/cu.usbmodem1421
-Exit safe start command sent
-26-Mar-2018 14:57:58 : OCT 1 motors selected
-26-Mar-2018 14:57:58 : All motors selected.
-26-Mar-2018 14:58:01 : Motor speed set to 10 26-Mar-2018 14:58:01 : Motor speed set to 20 26-Mar-2018 14:58:02 : Motor speed set to 30 26-Mar-2018 14:58:02 : Motor speed set to 40 26-Mar-2018 14:58:31 : OCT 1 motors deselected
-26-Mar-2018 14:58:32 : All motors deselected.
-26-Mar-2018 14:58:33 : Serial connection closed.
-26-Mar-2018 15:03:03 : Closing GUI.
-26-Mar-2018 15:03:21 : Closing GUI.
-26-Mar-2018 15:03:29 : Closing GUI.
-26-Mar-2018 15:03:46 : Closing GUI.
-26-Mar-2018 15:04:40 : Closing GUI.
-26-Mar-2018 15:04:40 : Unable to stop all motors: No serial connection.

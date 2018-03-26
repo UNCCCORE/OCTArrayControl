@@ -22,7 +22,7 @@ function varargout = ControlPanel(varargin)
 
 % Edit the above text to modify the response to help ControlPanel
 
-% Last Modified by GUIDE v2.5 26-Mar-2018 14:28:26
+% Last Modified by GUIDE v2.5 26-Mar-2018 15:12:49
 
 % Begin initialization code - DO NOT EDIT
 gui_Singleton = 1;
@@ -1065,8 +1065,8 @@ if status
 
     
 end
-hObject.String = num2str(motorSpeedSetDelay);
 
+hObject.String = num2str(motorSpeedSetDelay);
 
 end
 % --- Executes during object creation, after setting all properties.
@@ -1081,5 +1081,9 @@ if ispc && isequal(get(hObject,'BackgroundColor'), get(0,'defaultUicontrolBackgr
     set(hObject,'BackgroundColor','white');
 end
 global motorSpeedSetDelay;
-motorSpeedSetDelay = num2str(hObject.String);
+motorSpeedSetDelay = str2num(hObject.String);
+end
+
+function pushbuttonRelease_CreateFcn(hObject,eventData,handles)
+
 end
