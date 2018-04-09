@@ -2,5 +2,5 @@ function s = openSerial(portName)
 
 s=serial(portName);
 fopen(s);
-s.BaudRate = 19200;
+s.BaudRate = 115200;
 end

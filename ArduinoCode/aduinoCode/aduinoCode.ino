@@ -1,14 +1,11 @@
-<<<<<<< HEAD
 byte incomingByte_1 = 0;
 byte incomingByte_2 = 0;
 
-=======
->>>>>>> refs/remotes/origin/master
 void setup() {
   // put your setup code here, to run once:
-Serial.begin(19200);
-Serial1.begin(19200);
-<<<<<<< HEAD
+Serial.begin(115200);
+Serial1.begin(115200);
+
 delay(5);
 }
 
@@ -24,20 +21,14 @@ void loop() {
     Serial.write(incomingByte_2);
     delay(2);
   }
-
-}
-=======
-
 }
 
-void loop() {
-  while (Serial.available()){
-    Serial1.write(Serial.read());
-  }
-  while (Serial1.available()){
-    Serial.write(Serial1.read());
-  }
-  
 
-}
->>>>>>> refs/remotes/origin/master
+//void loop() {
+//  while (Serial.available()){
+//    Serial1.write(Serial.read());
+//  }
+//  while (Serial1.available()){
+//    Serial.write(Serial1.read());
+//  } 
+//}
